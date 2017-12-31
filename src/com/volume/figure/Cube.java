@@ -7,14 +7,13 @@ import com.math.volumeofbodies.IVolume;
 public class Cube extends Figure implements IVolume, IFigureArea {	
 	
 	@Override
-	public double area(double a, double b, double h, double angle, double diagonal) {
-		
+	public double area(double a, double b, double h, double angle, double diagonal) {		
 		return a*a;
 	}
 		
 	@Override
-	public double volume(double s, double h) {
-		s = area(this.sideA,this.sideA,0,0,0);						
+	public double volume(double h) {
+		double s = area(this.sideA,this.sideA,0,0,0);						
 		return s*h;
 	}
 	

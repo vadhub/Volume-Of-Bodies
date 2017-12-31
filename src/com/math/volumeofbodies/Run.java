@@ -8,9 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.volume.figure.Cube;
+
 public class Run {
 
 	public static void main(String[] args) {
+		Cube cube = new Cube();
+		cube.sideA = 10;		
+		System.out.println(cube.volume(10));
 		JFrame frame = new JFrame();
 		JPanel mainPanel = new JPanel(new BorderLayout());
 
