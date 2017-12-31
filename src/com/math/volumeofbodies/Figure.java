@@ -1,9 +1,10 @@
 package com.math.volumeofbodies;
 
 public class Figure {
-	double side;
-	double angle;
-	double diagonal;
-	double areas;
+	public double sideA;
+	public double sideB;
+	public double angle;
+	public double diagonal;
+	public double areas;
 	
 }
