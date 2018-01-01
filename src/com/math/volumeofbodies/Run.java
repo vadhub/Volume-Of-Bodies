@@ -13,9 +13,8 @@ import com.volume.figure.Cube;
 public class Run {
 
 	public static void main(String[] args) {
-		Cube cube = new Cube();
-		cube.sideA = 10;		
-		System.out.println(cube.volume(10));
+		Cube cube = new Cube(10,10,0,0,0);				
+		System.out.println(cube.volume(10, 10));
 		JFrame frame = new JFrame();
 		JPanel mainPanel = new JPanel(new BorderLayout());
 
