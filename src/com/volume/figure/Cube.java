@@ -6,13 +6,12 @@ import com.math.volumeofbodies.IVolume;
 
 public class Cube extends Figure implements IVolume, IFigureArea {
 
-	public Cube(double sideA, double sideB, double angle, double diagonal, double areas) {
-		super(sideA, sideB, angle, diagonal, areas);
+	public Cube(double sideA, double sideB, double hight, double angle, double diagonal, double areas) {
+		super(sideA, sideB, angle, diagonal, areas, hight);
 	}
 
 	@Override
-	public double area(double a, double b, double h, double angle,
-			double diagonal) {
+	public double area(double a, double b, double h, double angle, double diagonal) {
 		return a * a;
 	}
 
