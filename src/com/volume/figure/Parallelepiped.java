@@ -13,9 +13,9 @@ public class Parallelepiped extends Figure implements IFigureArea, IVolume {
 
 	@Override
 	public double volume(double h, double area) {
-		
+
 		area = area(this.sideA, this.sideB, this.hight, this.angle, this.diagonal);
-		
+
 		return h*area;
 	}
 

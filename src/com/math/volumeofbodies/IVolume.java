@@ -1,5 +1,5 @@
 package com.math.volumeofbodies;
 
 public interface IVolume {
-	public double volume(double h, double area);
+	double volume(double h, double area);
 }

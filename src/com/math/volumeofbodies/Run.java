@@ -12,9 +12,7 @@ import com.volume.figure.Cube;
 
 public class Run {
 
-	public static void main(String[] args) {
-		Cube cube = new Cube(10,10,0,0,0,0);
-		System.out.println(cube.volume(10, 10));
+	public static void main(String[] args) {	
 		
 		JFrame frame = new JFrame();
 		JPanel mainPanel = new JPanel(new BorderLayout());
@@ -24,14 +22,25 @@ public class Run {
 
 		JButton btn1 = new JButton("ok");
 
-		frame.setSize(300, 300);
+		frame.setSize(300, 200);
 		frame.setLocation(400, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 
 		JTextField inText1= new JTextField(4);
 		JTextField inText2 = new JTextField(4);
-		JTextField inText3 = new JTextField(4);
+		JTextField inText3 = new JTextField(4);	
+		
+		inText1.setText("0");
+		inText2.setText("0");
+		inText3.setText("0");
+		
+		int a = Integer.valueOf(inText1.getText());
+		int b = Integer.valueOf(inText2.getText());
+		int c = Integer.valueOf(inText3.getText());
+		
+		Cube cube = new Cube(a,b,0,0,0,0);
+		System.out.println(cube.volume(a, b));
 
 		tPanel.add(inText1);
 		tPanel.add(inText2);
