@@ -1,6 +1,6 @@
 package com.math.volumeofbodies;
 
-public class Figure {
+public abstract class AbstactFigure {
 	public double sideA;
 	public double sideB;
 	public double hight;
@@ -8,7 +8,7 @@ public class Figure {
 	public double diagonal;
 	public double areas;
 	
-	public Figure(double sideA, double sideB, double hight,double angle, double diagonal, double areas) {
+	public AbstactFigure(double sideA, double sideB, double hight,double angle, double diagonal, double areas) {
 		this.angle = angle;
 		this.areas = areas;
 		this.diagonal = diagonal;
@@ -16,5 +16,4 @@ public class Figure {
 		this.sideB = sideB;
 		this.hight = hight;
 	}
-	
 }

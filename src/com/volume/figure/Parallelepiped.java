@@ -1,10 +1,10 @@
 package com.volume.figure;
 
-import com.math.volumeofbodies.Figure;
+import com.math.volumeofbodies.AbstactFigure;
 import com.math.volumeofbodies.IFigureArea;
 import com.math.volumeofbodies.IVolume;
 
-public class Parallelepiped extends Figure implements IFigureArea, IVolume {
+public class Parallelepiped extends AbstactFigure implements IFigureArea, IVolume {
 
 	public Parallelepiped(double sideA, double sideB, double hight,	double angle, double diagonal, double areas) {
 		super(sideA, sideB, angle, diagonal, areas, hight);
@@ -20,8 +20,7 @@ public class Parallelepiped extends Figure implements IFigureArea, IVolume {
 	}
 
 	@Override
-	public double area(double a, double b, double h, double angle,
-			double diagonal) {
+	public double area(double a, double b, double h, double angle,double diagonal) {
 		return a * b;
 	}
 
