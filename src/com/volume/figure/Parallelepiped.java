@@ -6,7 +6,7 @@ import com.math.volumeofbodies.IVolume;
 
 public class Parallelepiped extends Figure implements IFigureArea, IVolume {
 
-	public Parallelepiped(double sideA, double sideB, double hight, double angle,double diagonal, double areas) {
+	public Parallelepiped(double sideA, double sideB, double hight,	double angle, double diagonal, double areas) {
 		super(sideA, sideB, angle, diagonal, areas, hight);
 
 	}
@@ -14,15 +14,15 @@ public class Parallelepiped extends Figure implements IFigureArea, IVolume {
 	@Override
 	public double volume(double h, double area) {
 
-		area = area(this.sideA, this.sideB, this.hight, this.angle, this.diagonal);
+		area = area(this.sideA, this.sideB, this.hight, this.angle,	this.diagonal);
 
-		return h*area;
+		return h * area;
 	}
 
 	@Override
-	public double area(double a, double b, double h, double angle, double diagonal) {
-		
-		return a*b;
+	public double area(double a, double b, double h, double angle,
+			double diagonal) {
+		return a * b;
 	}
 
 }

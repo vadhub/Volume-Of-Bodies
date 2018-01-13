@@ -15,7 +15,6 @@ public class Starter {
 		
 		Collection<String> arr = new ArrayList<String>();
 		
-		
 	}
 
 }
