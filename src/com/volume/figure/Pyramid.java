@@ -12,7 +12,7 @@ public class Pyramid extends AbstractFigure implements IVolume, IFigureArea{
 
 	@Override
 	public double area(double a, double b, double h, double angle,double diagonal) {
-		return a*b;
+		return 0;
 	}
 
 	@Override
