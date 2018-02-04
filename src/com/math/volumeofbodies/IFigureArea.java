@@ -1,5 +1,5 @@
 package com.math.volumeofbodies;
 
 public interface IFigureArea {	
-	double area(double a, double b, double h, double angle, double diagonal);	
+	double area(double numberOfSides, double h, double angle, double diagonal, double radius);	
 }

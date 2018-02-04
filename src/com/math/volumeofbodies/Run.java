@@ -39,9 +39,7 @@ public class Run {
 		
 		int a = Integer.valueOf(inText1.getText());
 		int b = Integer.valueOf(inText2.getText());
-		int c = Integer.valueOf(inText3.getText());
-		
-		
+		int c = Integer.valueOf(inText3.getText());		
 
 		tPanel.add(inText1);
 		tPanel.add(inText2);
