@@ -2,21 +2,16 @@ package com.volume.figure;
 
 import com.math.volumeofbodies.AbstractFigure;
 
-public class Pyramid extends AbstractFigure{
-	public Pyramid(double sideA, double sideB, double hight, double angle, double diagonal, double areas) {
-		super(sideA, sideB, hight, angle, diagonal, areas);	
+public abstract class Pyramid extends AbstractFigure{
+	public Pyramid(
+			double sideA,
+			double sideB,
+			double hight,
+			double angle,
+			double diagonal,
+			double areas,
+			double radius
+			) {
+		super(sideA, sideB, hight, angle, diagonal, areas, radius);	
 	}
-
-	@Override
-	public double area(double numberOfSides, double h, double angle,double diagonal, double radius) {
-		
-		return 0;
-	}
-
-	@Override
-	public double volume(double h, double area) {
-		
-		return 0;
-	}
-
 }

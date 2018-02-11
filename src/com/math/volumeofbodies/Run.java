@@ -8,12 +8,24 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.volume.figure.Parallelepiped;
+
 public class Run {
 
 	public static void main(String[] args) {	
 		
 		JFrame frame = new JFrame();
 		JPanel mainPanel = new JPanel(new BorderLayout());
+		
+		double numberOfSides = 56;
+		double h = 4;
+		double angle = 3;
+		double diagonal = 7;
+		double radius = 5;
+		double sideA = 6;
+		double sideB = 3;
+		Parallelepiped par = new Parallelepiped(numberOfSides, h, angle, diagonal, radius, 4, sideA, sideB);
+		System.out.println(par.area(numberOfSides, h, angle, diagonal, radius, sideA, sideB));
 
 		JPanel tPanel = new JPanel(new FlowLayout());
 		JPanel bPanel = new JPanel(new FlowLayout());

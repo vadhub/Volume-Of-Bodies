@@ -2,22 +2,22 @@ package com.volume.figure;
 
 import com.math.volumeofbodies.AbstractFigure;
 
-public class Prism extends AbstractFigure{
-	
-	public Prism(double sideA, double sideB, double hight, double angle,double diagonal, double areas) {
-		super(sideA, sideB, hight, angle, diagonal, areas);
-	}
+public abstract class Prism extends AbstractFigure {
+	double sideB;	
 
-	@Override
-	public double area(double numberOfSides, double h, double angle, double diagonal, double radius) {
-		
-		return 0;
+	public Prism(
+			double numbersOfSides,
+			double side,
+			double hight,
+			double angle,
+			double diagonal,
+			double areas,
+			double radius,
+			double sideB			
+			) {			
+		super(numbersOfSides, side, hight, angle, diagonal, areas, radius);		
+		this.sideB = sideB;
 	}
-
-	@Override
-	public double volume(double h, double area) {
-		
-		return 0;
-	}	
 	
+
 }
