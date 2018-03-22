@@ -8,10 +8,9 @@ public abstract class Pyramid extends AbstractFigure{
 			double sideB,
 			double hight,
 			double angle,
-			double diagonal,
-			double areas,
+			double diagonal,		
 			double radius
 			) {
-		super(sideA, sideB, hight, angle, diagonal, areas, radius);	
+		super(sideA, sideB, hight, angle, diagonal, radius);	
 	}
 }

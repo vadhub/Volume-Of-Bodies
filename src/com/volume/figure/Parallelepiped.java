@@ -3,16 +3,15 @@ package com.volume.figure;
 public class Parallelepiped extends Prism{	
 	
 	public Parallelepiped(
-			double numbersOfSides,
-			double side,
+			double numbersOfSides,			
 			double hight,			
 			double angle,
 			double diagonal,
-			double areas,
 			double radius,
+			double side,
 			double sideB
 			) {
-		super(numbersOfSides, side, hight, angle, diagonal, areas, radius, sideB);
+		super(numbersOfSides, hight, angle, diagonal, radius, sideB, side);
 
 	}
 
@@ -24,7 +23,7 @@ public class Parallelepiped extends Prism{
 	}
 
 	@Override
-	public double volume(double h2, double area) {		
-		return area= area(numbersOfSides, hight, angle, diagonal, radius ,side, sideB)*h2;
+	public double volume(double hight, double area) {		
+		return area= area(numbersOfSides, hight, angle, diagonal, radius ,side, sideB)*hight;
 	}		
 }

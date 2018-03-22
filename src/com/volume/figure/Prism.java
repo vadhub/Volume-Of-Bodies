@@ -7,15 +7,14 @@ public abstract class Prism extends AbstractFigure {
 
 	public Prism(
 			double numbersOfSides,
-			double side,
 			double hight,
 			double angle,
-			double diagonal,
-			double areas,
+			double diagonal,			
 			double radius,
+			double side,
 			double sideB			
 			) {			
-		super(numbersOfSides, side, hight, angle, diagonal, areas, radius);		
+		super(numbersOfSides, hight, angle, diagonal, radius, side);		
 		this.sideB = sideB;
 	}
 	

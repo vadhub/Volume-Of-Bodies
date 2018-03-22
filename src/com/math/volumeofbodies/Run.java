@@ -2,57 +2,66 @@ package com.math.volumeofbodies;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.volume.figure.Parallelepiped;
 
-public class Run {
+public class Run {	
+	
+	//s = (p*r)/2 - mn
 
 	public static void main(String[] args) {	
 		
 		JFrame frame = new JFrame();
-		JPanel mainPanel = new JPanel(new BorderLayout());
+		JPanel mainPanel = new JPanel(new BorderLayout());		
 		
-		double numberOfSides = 56;
-		double h = 4;
-		double angle = 3;
-		double diagonal = 7;
-		double radius = 5;
-		double sideA = 6;
-		double sideB = 3;
-		Parallelepiped par = new Parallelepiped(numberOfSides, h, angle, diagonal, radius, 4, sideA, sideB);
-		System.out.println(par.area(numberOfSides, h, angle, diagonal, radius, sideA, sideB));
-
+		JTextField inText1= new JTextField(4);
+		JTextField inText2 = new JTextField(4);
+		JTextField inText3 = new JTextField(4);
+		
+		int a = Integer.valueOf(inText1.getText());
+		int b = Integer.valueOf(inText2.getText());
+		int c = Integer.valueOf(inText3.getText());
+		
+		double numbersOfSides = 0;
+		double hight = c;
+		double angle = 0;
+		double diagonal = 0;
+		double radius = 0;
+		double sideA = a;
+		double sideB = b;
+		
+		Parallelepiped par = new Parallelepiped(numbersOfSides, hight, angle, diagonal, radius, sideA, sideB);
+		
+		double areas = par.area(numbersOfSides, hight, angle, diagonal, radius, sideA, sideB);
+		
+		double volume = par.volume(c, areas);
+		
 		JPanel tPanel = new JPanel(new FlowLayout());
 		JPanel bPanel = new JPanel(new FlowLayout());
 
-		JButton btn1 = new JButton("ok");
+		JButton btn1 = new JButton("Valume");
+		
+		btn1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, volume);				
+			}
+		});
 
 		frame.setSize(300, 200);
 		frame.setLocation(400, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-
-		JTextField inText1= new JTextField(4);
-		JTextField inText2 = new JTextField(4);
-		JTextField inText3 = new JTextField(4);	
+		frame.setVisible(true);			
 		
-		JTextField outText = new JTextField(4);	
-		
-		inText1.setText("0");
-		inText2.setText("0");
-		inText3.setText("0");
-		
-		outText.setText("0");
-		
-		int a = Integer.valueOf(inText1.getText());
-		int b = Integer.valueOf(inText2.getText());
-		int c = Integer.valueOf(inText3.getText());		
-
 		tPanel.add(inText1);
 		tPanel.add(inText2);
 		tPanel.add(inText3);
