@@ -2,6 +2,7 @@ package com.math.volumeofbodies;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.JobAttributes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,49 +15,64 @@ import javax.swing.JTextField;
 import com.volume.figure.Parallelepiped;
 
 public class Run {	
-	
-	//s = (p*r)/2 - mn
 
-	public static void main(String[] args) {	
+	//s = (p*r)/2 - mn
+	
+	static int a = 0;	
+	
+	static int b = 0;
+	
+	static int c = 0;
+	
+	static double volume = 0;
+	
+	static double numbersOfSides = 0;
+	static double hight = c;
+	static double angle = 0;
+	static double diagonal = 0;
+	static double radius = 0;
+	static double sideA = a;
+	static double sideB = b;
+
+	public static void main(String[] args) {
+		
 		
 		JFrame frame = new JFrame();
-		JPanel mainPanel = new JPanel(new BorderLayout());		
+		JPanel mainPanel = new JPanel(new BorderLayout());
+		
+		JButton btn1 = new JButton("Valume");
 		
 		JTextField inText1= new JTextField(4);
 		JTextField inText2 = new JTextField(4);
-		JTextField inText3 = new JTextField(4);
+		JTextField inText3 = new JTextField(4);	
 		
-		int a = Integer.valueOf(inText1.getText());
-		int b = Integer.valueOf(inText2.getText());
-		int c = Integer.valueOf(inText3.getText());
-		
-		double numbersOfSides = 0;
-		double hight = c;
-		double angle = 0;
-		double diagonal = 0;
-		double radius = 0;
-		double sideA = a;
-		double sideB = b;
-		
-		Parallelepiped par = new Parallelepiped(numbersOfSides, hight, angle, diagonal, radius, sideA, sideB);
-		
-		double areas = par.area(numbersOfSides, hight, angle, diagonal, radius, sideA, sideB);
-		
-		double volume = par.volume(c, areas);
-		
-		JPanel tPanel = new JPanel(new FlowLayout());
-		JPanel bPanel = new JPanel(new FlowLayout());
-
-		JButton btn1 = new JButton("Valume");
+		inText1.setText("0");
+		inText2.setText("0");
+		inText3.setText("0");
 		
 		btn1.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, volume);				
+				a = Integer.valueOf(inText1.getText());
+				b = Integer.valueOf(inText2.getText());
+				c = Integer.valueOf(inText3.getText());
+				
+				Parallelepiped par = new Parallelepiped(numbersOfSides, hight, angle, diagonal, radius, sideA, sideB);
+				
+				double areas = par.area(numbersOfSides, hight, angle, diagonal, radius, sideA, sideB);
+				
+				volume = par.volume(c, areas);
+				
+				System.out.println(a+""+b+""+c);
+				
+				JOptionPane.showMessageDialog(null, volume);
 			}
-		});
-
+		});	
+		
+		JPanel tPanel = new JPanel(new FlowLayout());
+		JPanel bPanel = new JPanel(new FlowLayout());	
+		
 		frame.setSize(300, 200);
 		frame.setLocation(400, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

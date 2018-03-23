@@ -16,14 +16,14 @@ public class Parallelepiped extends Prism{
 	}
 
 	@Override
-	public double area(double numberOfSides, double h, double angle, double diagonal, double radius, double sideA, double sideB) {
+	public double area(double numberOfSides, double hight, double angle, double diagonal, double radius, double sideA, double sideB) {
 		sideA = this.side;
 		sideB = this.sideB;
 		return sideA*sideB;
 	}
 
 	@Override
-	public double volume(double hight, double area) {		
-		return area= area(numbersOfSides, hight, angle, diagonal, radius ,side, sideB)*hight;
-	}		
+	public double volume(double high, double area) {
+		return area= area(numbersOfSides, hight, angle, diagonal, radius ,side, sideB)*high;
+	}
 }
