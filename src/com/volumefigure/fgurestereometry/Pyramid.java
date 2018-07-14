@@ -1,6 +1,6 @@
-package com.volume.figure;
+package com.volumefigure.fgurestereometry;
 
-import com.math.volumeofbodies.AbstractFigure;
+import com.volumefigure.abstractfigure.AbstractFigure;
 
 public abstract class Pyramid extends AbstractFigure{
 	public Pyramid(
