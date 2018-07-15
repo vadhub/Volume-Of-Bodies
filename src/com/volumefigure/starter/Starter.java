@@ -2,6 +2,7 @@ package com.volumefigure.starter;
 
 
 import java.awt.BorderLayout;
+import java.awt.Choice;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -24,6 +25,9 @@ public class Starter {
 		JTextField x = new JTextField(10);
 		JTextField y = new JTextField(10);
 		JTextField z = new JTextField(10);
+		Choice ch= new Choice();
+		ch.add("Prism");
+		ch.add("Pyramid");
 
 		JLabel labelX = new JLabel("X:");
 		JLabel labelY = new JLabel("Y:");
@@ -31,12 +35,14 @@ public class Starter {
 
 		JTextField conclision = new JTextField(10);
 		
+		
 		width = Double.parseDouble(x.getText());
 		length = Double.parseDouble(y.getText());
 		height = Double.parseDouble(x.getText());
 
 		JButton ok = new JButton("OK");
 		ok.addActionListener(a);
+		panel.add(ch);
 		panel.add(labelX);
 		panel.add(x);
 		panel.add(labelY);
@@ -48,7 +54,7 @@ public class Starter {
 		center.add(panel,"Center");
 
 
-		display.add(center);
+		display.add(center);	
 		display.setBounds(500, 400, 160, 180);
 		display.setVisible(true);
 		display.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
