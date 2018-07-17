@@ -4,6 +4,9 @@ public class ConvertorSinAngls {
 	
 	private int angle;
 	
+	public ConvertorSinAngls() {
+	}
+	
 	public ConvertorSinAngls(int angle){
 		this.angle = angle;		
 	}

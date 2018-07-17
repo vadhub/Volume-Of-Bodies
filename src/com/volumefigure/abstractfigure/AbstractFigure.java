@@ -1,6 +1,6 @@
 package com.volumefigure.abstractfigure;
 
-public abstract class AbstractFigure {
+public abstract class AbstractFigure{
 	
 	private String name;
 	private double numbersOfSides;
