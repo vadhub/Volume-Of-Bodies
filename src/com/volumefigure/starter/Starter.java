@@ -56,7 +56,7 @@ public class Starter {
 				height = Double.parseDouble(z.getText());
 				
 				Polygon polygon = new Polygon("V",length, 4 ,width);
-				Prism prism = new Prism("P",polygon.areaStandart(),height);
+				Prism prism = new Prism("P",polygon.areaRectangleStandart(),height);
 				
 				conclision.setText(String.valueOf(prism.volume()));
 								

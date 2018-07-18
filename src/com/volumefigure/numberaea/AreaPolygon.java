@@ -14,6 +14,10 @@ public class AreaPolygon implements IFigureArea{
 	public double areaTwoVariable(double radius, double halvePirimetr) {
 		return radius*halvePirimetr;
 	}
+	
+	public double areaVariable(double width, double height) {
+		return width*height;
+	}
 
 	@Override
 	public double areaThreeVariable(double radius, double side, double numSide) {
@@ -23,6 +27,6 @@ public class AreaPolygon implements IFigureArea{
 	
 	protected double halvePirimetr(double side, int numSide){
 		return (side*numSide)/2;		
-	}
+	}	
 	
 }
