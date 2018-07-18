@@ -5,6 +5,8 @@ import java.awt.BorderLayout;
 import java.awt.Choice;
 import java.awt.FlowLayout;
 import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,20 +19,19 @@ import com.volumefigure.fgurestereometry.Prism;
 import com.volumefigure.figureplanimetry.Polygon;
 
 public class Starter {
+	
+	static double width;
+	static double length ;
+	static double height;			
+	
 	public static void main(String[] args) {
-		double width = 0;
-		int length = 0;
-		double height = 0;
 		
-		Polygon polygon = new Polygon("Vad",1, length ,width);
-		Prism prism = new Prism("Prism",polygon.areaStandart(),height);
 		JFrame display = new JFrame("Frame");
 		JPanel panel = new JPanel(new FlowLayout());
 		JPanel center = new JPanel(new BorderLayout());
-		JTextField x = new JTextField(10);
-		JTextField y = new JTextField(10);
-		JTextField z = new JTextField(10);
-		Choice ch= new Choice();
+		
+		
+		Choice ch= new Choice();		
 		ch.add("Prism");
 		ch.add("Pyramid");
 
@@ -40,10 +41,27 @@ public class Starter {
 
 		JTextField conclision = new JTextField(10);
 		
-		Action a = new Action(width, length, height, x.getText(), y.getText(), z.getText(),prism.volume(), conclision);
-
+		JTextField x = new JTextField(10);
+		JTextField y = new JTextField(10);
+		JTextField z = new JTextField(10);	
+		
 		JButton ok = new JButton("OK");
-		ok.addActionListener(a);
+		
+		ok.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				width = Double.parseDouble(x.getText());
+				length = Integer.parseInt(y.getText());
+				height = Double.parseDouble(z.getText());
+				
+				Polygon polygon = new Polygon("V",length, 4 ,width);
+				Prism prism = new Prism("P",polygon.areaStandart(),height);
+				
+				conclision.setText(String.valueOf(prism.volume()));
+								
+			}
+		});
 		panel.add(ch);
 		panel.add(labelX);
 		panel.add(x);
@@ -53,7 +71,7 @@ public class Starter {
 		panel.add(z);
 		panel.add(ok);
 		panel.add(conclision);
-		center.add(panel,"Center");
+		center.add(panel,"Center");		
 		
 		display.add(center);	
 		display.setBounds(500, 400, 160, 180);
