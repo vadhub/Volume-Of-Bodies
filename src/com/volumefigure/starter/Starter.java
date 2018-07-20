@@ -26,7 +26,8 @@ public class Starter {
 	public static void main(String[] args) {
 
 		JFrame display = new JFrame("Frame");
-		JPanel panel = new JPanel(new GridLayout());
+		JPanel panelChoiser = new JPanel();
+		JPanel panel = new JPanel(new FlowLayout());
 		JPanel center = new JPanel(new BorderLayout());
 
 
@@ -53,7 +54,12 @@ public class Starter {
 				width = Double.parseDouble(x.getText());
 				length = Integer.parseInt(y.getText());
 				height = Double.parseDouble(z.getText());
-
+				
+				if(ch.getSelectedItem().equals("Prism")){
+					System.out.println("Prism");					
+				}else if(ch.getSelectedItem().equals("Pyramid")){
+					System.out.println("Pyramid");
+				}
 				Polygon polygon = new Polygon(length, width);
 				Prism prism = new Prism("P",polygon.areaRectangleStandart(), height);
 
@@ -61,7 +67,7 @@ public class Starter {
 
 			}
 		});
-		panel.add(ch);
+		panelChoiser.add(ch);
 		panel.add(labelX);
 		panel.add(x);
 		panel.add(labelY);
@@ -70,10 +76,11 @@ public class Starter {
 		panel.add(z);
 		panel.add(ok);
 		panel.add(conclision);
-		center.add(panel,"Center");
+		center.add(panelChoiser,"North");
+		center.add(panel);
 
 		display.add(center);
-		display.setBounds(500, 400, 180, 200);
+		display.setBounds(500, 400, 160, 220);
 		display.setVisible(true);
 		display.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
