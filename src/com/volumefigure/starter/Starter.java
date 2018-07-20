@@ -4,7 +4,6 @@ package com.volumefigure.starter;
 import java.awt.BorderLayout;
 import java.awt.Choice;
 import java.awt.FlowLayout;
-import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,7 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.volume.gui.Action;
 import com.volumefigure.fgurestereometry.Prism;
 import com.volumefigure.figureplanimetry.Polygon;
 
