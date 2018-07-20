@@ -9,6 +9,11 @@ public class Polygon extends Line{
 	
 	private AreaPolygon areaPolygon = new AreaPolygon();
 	
+	public Polygon(double height, double width) {
+		setHight(height);
+		setWidth(width);
+	}
+	
 	public Polygon(String name ,double radius, double halvePirimetr) {
 		this.name = name;
 		this.halvePerimetr = halvePirimetr;
