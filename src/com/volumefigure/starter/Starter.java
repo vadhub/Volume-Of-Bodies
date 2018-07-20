@@ -72,7 +72,7 @@ public class Starter {
 		center.add(panel,"Center");		
 		
 		display.add(center);	
-		display.setBounds(500, 400, 160, 180);
+		display.setBounds(500, 400, 180, 200);
 		display.setVisible(true);
 		display.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
 
