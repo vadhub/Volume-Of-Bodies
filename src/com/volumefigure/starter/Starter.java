@@ -34,6 +34,7 @@ public class Starter {
 		Choice ch= new Choice();
 		ch.add("Prism");
 		ch.add("Pyramid");
+		ch.add("Conus");
 
 		JLabel labelX = new JLabel("X:");
 		JLabel labelY = new JLabel("Y:");

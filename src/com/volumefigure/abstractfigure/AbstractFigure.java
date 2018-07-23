@@ -16,7 +16,7 @@ public abstract class AbstractFigure{
 	public AbstractFigure(double width, double hight) {
 		this.setHight(hight);
 		this.setWidth(width);
-	}
+		}
 
 	public AbstractFigure(double numbersOfSides, double hight, double angle, double diagonal, double radius, double side) {
 		this.setAngle(angle);
@@ -132,6 +132,7 @@ public abstract class AbstractFigure{
 	public String getName() {
 		return name;
 	}
+
 
 	public void setName(String name) {
 		if(!name.isEmpty()){

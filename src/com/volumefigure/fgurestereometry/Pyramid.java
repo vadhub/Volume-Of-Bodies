@@ -1,16 +1,17 @@
 package com.volumefigure.fgurestereometry;
 
+import com.volume.numvolume.VolumePiramide;
 import com.volumefigure.abstractfigure.AbstractFigure;
 
 public abstract class Pyramid extends AbstractFigure{
-	public Pyramid(
-			double sideA,
-			double sideB,
-			double hight,
-			double angle,
-			double diagonal,		
-			double radius
-			) {
-		super(sideA, sideB, hight, angle, diagonal, radius);	
+	private VolumePiramide volumePiramide = new VolumePiramide();
+	public Pyramid(double area, double height) {
+		setArea(area);
+		setHight(height);
+	}
+	
+	public double volume(){
+		System.out.println("	"+getName());
+		return volumePiramide.volume(getHight(), getArea());
 	}
 }

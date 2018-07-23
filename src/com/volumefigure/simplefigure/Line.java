@@ -23,7 +23,8 @@ public class Line extends Point {
 	public double areaStandart(){
 		return numberOfPoints;
 		
-	}
+	}	
+	
 	
 	
 }

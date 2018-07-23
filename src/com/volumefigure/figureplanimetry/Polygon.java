@@ -37,7 +37,8 @@ public class Polygon extends Line{
 	public double areaOfHalvePerimetr() {
 		System.out.println("      "+name);
 		return areaPolygon.areaThreeVariable(getRadius(), getWidth(),getNumbersOfSides());
-	}	
+	}
+	
 	public double areaRectangleStandart(){
 		return areaPolygon.areaVariable(getWidth(), getHight());
 		
@@ -45,7 +46,7 @@ public class Polygon extends Line{
 	public double getHalvePerimetr() {
 		return halvePerimetr;
 	}
-	
+
 	public void setHalvePirimetr(double halvePerimetr) {
 		if(halvePerimetr>0){
 		this.halvePerimetr = halvePerimetr;
