@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.volumefigure.fgurestereometry.Conus;
 import com.volumefigure.fgurestereometry.Prism;
 import com.volumefigure.fgurestereometry.Pyramid;
 import com.volumefigure.figureplanimetry.Polygon;
@@ -67,7 +68,8 @@ public class Starter {
 					
 					conclision.setText(String.valueOf(pyramid.volume()));
 				}else if(ch.getSelectedItem().equals("Conus")){
-										
+					Conus conus = new Conus(polygon.areaRectangleStandart(), height);
+					conclision.setText(String.valueOf(conus.volume()));
 				}
 				
 				
