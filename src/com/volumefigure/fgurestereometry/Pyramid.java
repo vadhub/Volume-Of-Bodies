@@ -3,7 +3,7 @@ package com.volumefigure.fgurestereometry;
 import com.volume.numvolume.VolumePiramide;
 import com.volumefigure.abstractfigure.AbstractFigure;
 
-public abstract class Pyramid extends AbstractFigure{
+public class Pyramid extends AbstractFigure{
 	private VolumePiramide volumePiramide = new VolumePiramide();
 	public Pyramid(double area, double height) {
 		setArea(area);

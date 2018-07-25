@@ -4,7 +4,6 @@ package com.volumefigure.starter;
 import java.awt.BorderLayout;
 import java.awt.Choice;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.volumefigure.fgurestereometry.Prism;
+import com.volumefigure.fgurestereometry.Pyramid;
 import com.volumefigure.figureplanimetry.Polygon;
 
 public class Starter {
@@ -56,15 +56,23 @@ public class Starter {
 				length = Integer.parseInt(y.getText());
 				height = Double.parseDouble(z.getText());
 				
-				if(ch.getSelectedItem().equals("Prism")){
-					System.out.println("Prism");					
-				}else if(ch.getSelectedItem().equals("Pyramid")){
-					System.out.println("Pyramid");
-				}
 				Polygon polygon = new Polygon(length, width);
-				Prism prism = new Prism("P",polygon.areaRectangleStandart(), height);
+				
+				if(ch.getSelectedItem().equals("Rectangle")){
+					Prism prism = new Prism("P",polygon.areaRectangleStandart(), height);
+					conclision.setText(String.valueOf(prism.volume()));
+					
+				}else if(ch.getSelectedItem().equals("Pyramid")){
+					Pyramid pyramid = new Pyramid(polygon.areaRectangleStandart(), height);
+					
+					conclision.setText(String.valueOf(pyramid.volume()));
+				}else if(ch.getSelectedItem().equals("Conus")){
+										
+				}
+				
+				
 
-				conclision.setText(String.valueOf(prism.volume()));
+				
 
 			}
 		});
